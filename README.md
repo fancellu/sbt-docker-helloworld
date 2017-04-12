@@ -4,6 +4,8 @@ sbt-docker-helloworld
 This is a simple hello world example to serve as a skeleton app to show your Scala code
 running inside a docker container
 
+[A more complex docker-compose example](docker-compose/README.md)
+
 It uses the ```sbt-native-packager``` plugin
 
 First, make you you have docker installed and running
@@ -53,6 +55,9 @@ You can even supply your own Dockerfile if you so wish
 http://sbt-native-packager.readthedocs.io/en/latest/formats/docker.html#custom-dockerfile
 
 ---
+
+In order to make Docker easier to use, I recommend the portainer container, an admin web app for Docker
+http://portainer.io
 
 To read more about the sbt-native-packager Docker plugin
 

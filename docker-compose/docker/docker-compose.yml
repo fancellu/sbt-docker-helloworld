@@ -1,0 +1,22 @@
+mongo:
+    image: mongo
+    ports:
+       - "27017:27017"
+    volumes:
+      - /data:/data/db
+
+mongo-express:
+    image: mongo-express
+    links:
+      - mongo
+    ports:
+        - "8081:8081"
+    restart: always
+
+webapp-scala:
+  image: webapp-scala:1.0.0
+  links:
+    - mongo
+  ports:
+    - "8080:8080"
+
