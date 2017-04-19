@@ -7,7 +7,16 @@ scalaVersion := "2.11.8"
 libraryDependencies += "com.typesafe.akka" %% "akka-http" % "10.0.5"
 libraryDependencies += "org.mongodb.scala" %% "mongo-scala-driver" % "1.2.1"
 
+libraryDependencies ++= Seq("org.scalatest" %% "scalatest" % "3.0.1" % "test",
+  "org.scalaj" %% "scalaj-http" % "2.2.1" % "test",
+  "org.pegdown" % "pegdown" % "1.6.0" % "test"
+)
+
 enablePlugins(JavaAppPackaging, DockerComposePlugin)
+
+testTagsToExecute := "DockerComposeTag"
+
+testExecutionArgs := "-h target/htmldir"
 
 dockerImageCreationTask := (publishLocal in Docker).value
 

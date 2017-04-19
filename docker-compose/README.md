@@ -42,3 +42,18 @@ You can stop mongo, start again, and data will be still there
 To stop your stack, ```sbt dockerComposeStop```
 
 Being inside ```sbt``` and running ```dockerComposeRestart``` is very useful when coding
+
+## Testing
+
+You can run up the stack and run your unit/integration tests with 
+```sbt dockerComposeTest```
+
+Once it has run, you will also find an html report inside ```target/htmldir/index.html```
+
+You should see 2 test classes, one for the WebServer (which then talks to Mongo), as well
+as one for Mongo directly.
+
+As you can see, this is a nice way to compose/orchestrate your microservice stack
+
+More info here 
+https://github.com/Tapad/sbt-docker-compose#to-execute-scalatest-test-cases-against-a-running-instance
