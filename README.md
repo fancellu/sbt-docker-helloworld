@@ -16,7 +16,7 @@ should return the running containers on your current docker host
 
 Then go to the root of this project and run
 
-```sbt docker:publishLocal```
+```sbt stage docker:publishLocal```
 
 It should build and end with
 
@@ -31,7 +31,7 @@ should show your new image, named ```sbt-docker-helloworld```
 
 To run
 
-```docker run -it sbt-docker-helloworld:1.0```
+```docker run -it sbt-docker-helloworld:1.1```
 
 You should see "Hello World" follow by the timestamp
 

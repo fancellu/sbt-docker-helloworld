@@ -1,8 +1,8 @@
 name := "sbt-docker-helloworld"
 
-version := "1.0"
+version := "1.1"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.13.8"
 
 enablePlugins(JavaAppPackaging)
 
@@ -12,7 +12,7 @@ enablePlugins(DockerPlugin)
 
 // this is much smaller than the official java8 image
 
-dockerBaseImage := "frolvlad/alpine-oraclejdk8"
+dockerBaseImage := "openjdk:8-jre-alpine"
 
 import com.typesafe.sbt.packager.docker.Cmd
 
