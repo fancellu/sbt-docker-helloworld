@@ -1,6 +1,6 @@
 name := "webapp-scala"
 
-version := "1.0.0"
+version := "1.1.0"
 
 scalaVersion := "2.11.8"
 
@@ -20,7 +20,7 @@ testExecutionArgs := "-h target/htmldir"
 
 dockerImageCreationTask := (publishLocal in Docker).value
 
-dockerBaseImage := "frolvlad/alpine-oraclejdk8"
+dockerBaseImage := "openjdk:8-jre-alpine"
 
 import com.typesafe.sbt.packager.docker.Cmd
 
